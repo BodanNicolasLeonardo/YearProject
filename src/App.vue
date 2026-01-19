@@ -18,6 +18,12 @@ onUpdated(() => {
 </script>
 
 <template>
+  <header>
+    <nav>
+<RouterLink to="/">Login</RouterLink>
+<RouterLink to="/about">About</RouterLink>
+</nav>
+  </header>
   <i class="bi bi-brightness-high"></i>
   <login-page/>
 </template>
