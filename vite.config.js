@@ -7,7 +7,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/',
+  base: '/yearproject/',
   plugins: [
     vue(),
     vueDevTools(),
@@ -18,13 +18,27 @@ export default defineConfig({
       devOptions: {
         enabled: true
       },
+      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
       manifest: {
-        theme_color: "#169bcb",
+        name: 'Budget Planner',
+        short_name: 'BudgetApp',
+        description: 'A simple budget planning web app',
+        theme_color: '#169bcb',
+        background_color: '#ffffff',
+        display: 'standalone',
+        orientation: 'portrait',
+        scope: '/yearproject/',
+        start_url: '/yearproject/',
         icons: [
           {
-            src: "icons/BudgetBuddy.png",
-            sizes: "192x192",
-            type: "image/png",
+            src: 'icons/BudgetBuddy.png',
+            sizes: '192x192',
+            type: 'image/png'
+          },
+          {
+            src: 'icons/BudgetBuddy.png',
+            sizes: '512x512',
+            type: 'image/png'
           }
         ]
       }

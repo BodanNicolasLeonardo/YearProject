@@ -6,8 +6,14 @@ const totalIncome = ref(6000)
 const totalSpendings = ref(1000)
 </script>
 
+<script>
+export default {
+  name: 'DashboardView'
+}
+</script>
+
 <template>
-  <div class="flex min-h-screen bg-gray-100">
+  <div class="flex min-h-screen bg-white">
     <!-- Sidebar -->
     <aside class="w-64 bg-white border-r border-gray-200 px-6 py-8">
       <h2 class="text-xl font-bold mb-10">Budget Planner</h2>

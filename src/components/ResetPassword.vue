@@ -47,6 +47,7 @@ export default {
 	min-height: 100vh;
 	font-family: Arial, sans-serif;
 	color: #000;
+	background-color: white;
 }
 
 .login-content {
@@ -60,7 +61,7 @@ export default {
 .login-box {
 	text-align: center;
 	padding: 2rem;
-	border: 1px solid #ddd;
+	border: 1px solid #000000;
 	border-radius: 12px;
 	box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 	width: 320px;
@@ -146,7 +147,7 @@ footer {
 }
 
 footer a {
-	color: #ffffff;
+	color: #000000;
 	text-decoration: none;
 }
 </style>

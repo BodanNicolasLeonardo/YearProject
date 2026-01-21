@@ -1,7 +1,6 @@
 <script setup>
 import {ref} from "vue"
 const link = ref("")
-const target = ref("_blank")
 </script>
 
 <template>

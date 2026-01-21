@@ -1,0 +1,10 @@
+node_modules
+dist
+.vscode
+.yarn
+*.log
+*.lock
+package-lock.json
+yarn.lock
+coverage
+.nyc_output
