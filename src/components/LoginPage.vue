@@ -1,25 +1,27 @@
 <template>
   <div class="login-container">
-    <div class="login-box">
-      <h1>Welcome back</h1>
-      <form @submit.prevent>
-        <input type="email" placeholder="Email address" class="input" />
-        <button class="btn">Continue</button>
-      </form>
+    <div class="login-content">
+      <div class="login-box">
+        <h1>Welcome back</h1>
+        <form @submit.prevent>
+          <input type="email" placeholder="Email address" class="input" />
+          <router-link to="/about" class="btn">Continue</router-link>
+        </form>
 
-      <div class="links">
-        <p>Don't have an account? <a href="#">Sign Up</a></p>
-        <p>Forgot your password? <a href="#">Reset</a></p>
+        <div class="links">
+          <p>Don't have an account? <router-link to="/register">Sign Up</router-link></p>
+          <p>Forgot your password? <router-link to="/reset">Reset</router-link></p>
+        </div>
+
+        <div class="divider">
+          <span>or</span>
+        </div>
+
+        <router-link to="/google" class="google-btn">
+          <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" />
+          Continue with Google
+        </router-link>
       </div>
-
-      <div class="divider">
-        <span>or</span>
-      </div>
-
-      <button class="google-btn">
-        <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" />
-        Continue with Google
-      </button>
     </div>
 
     <footer>
@@ -29,8 +31,13 @@
 </template>
 
 <script>
+import { RouterLink } from 'vue-router'
+
 export default {
   name: "LoginPage",
+  components: {
+    RouterLink
+  }
 };
 </script>
 
@@ -38,11 +45,16 @@ export default {
 .login-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   min-height: 100vh;
   font-family: Arial, sans-serif;
   color: #000;
+}
+
+.login-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .login-box {
@@ -84,6 +96,7 @@ h1 {
 .links {
   font-size: 0.9rem;
   margin: 1rem 0;
+  text-align: center;
 }
 
 .links a {
@@ -123,6 +136,7 @@ footer {
   margin-top: 1.5rem;
   font-size: 0.85rem;
   color: #555;
+  text-align: center;
 }
 
 footer a {
