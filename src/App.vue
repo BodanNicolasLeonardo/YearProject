@@ -1,6 +1,4 @@
 <script setup>
-/*import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'*/
 import LoginPage from './components/LoginPage.vue'
 import { onMounted, onUpdated } from 'vue'
 import { ref } from 'vue'
@@ -22,7 +20,7 @@ onUpdated(() => {
 
   </header>
   <i class="bi bi-brightness-high"></i>
-  <login-page/>
+  <router-view />
 </template>
 
 <style scoped>

@@ -5,11 +5,12 @@
         <h1>Welcome back</h1>
         <form @submit.prevent>
           <input type="email" placeholder="Email address" class="input" />
-          <router-link to="/about" class="btn">Continue</router-link>
+          <input type="password" placeholder="Password" class="input" />
+          <router-link to="/dashboard" class="btn">Continue</router-link>
         </form>
 
         <div class="links">
-          <p>Don't have an account? <router-link to="/register">Sign Up</router-link></p>
+          <p>Don't have an account? <router-link to="/signup">Sign Up</router-link></p>
           <p>Forgot your password? <router-link to="/reset">Reset</router-link></p>
         </div>
 
@@ -53,6 +54,7 @@ export default {
 .login-content {
   flex: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -65,6 +67,7 @@ export default {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   width: 320px;
   background: #fff;
+  margin: 0 auto;
 }
 
 h1 {
